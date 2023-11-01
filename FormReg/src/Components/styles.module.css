@@ -5,7 +5,8 @@ box-sizing: border-box;
 }
 
 .fle{
-margin-top: 50px;
+margin-top: 20px;
+margin-bottom: 50px;
 }
 .dis{
     background-color: rgb(0, 0, 0, 0.9);
@@ -33,7 +34,7 @@ background: linear-gradient(rgb(94, 91, 91), grey);
 }
 
 
-/* Login section */
+          /* Login section */
 .cyn{
     /* background-color: rgb(19, 79, 103); */
     background-color: rgb(243, 238, 238);
@@ -126,8 +127,6 @@ background: linear-gradient(rgb(94, 91, 91), grey);
     width: 165px;
     height: 180px;
     background-color: whitesmoke;
-
-    /* width: 100%; */
 }
 
 
@@ -183,6 +182,10 @@ overflow: hidden;
 }
 .sell li{
     font-weight: 800;
+    
+}
+.emm{
+    padding-top: 5px;
 }
 .Md{
     font-size: 18px;
@@ -241,39 +244,8 @@ overflow: hidden;
     background-color: rgb(234, 155, 10);
 }
 
-.icon{
-    display: flex;
-    align-items: baseline;
-    
-}
-.icon p{
-    font-weight: 600;
-}
-.icon:hover{
-color: rgb(242, 161, 11);
-transition: .2s;
-}
-.ico{
-    font-size: 25px;
-    margin-right: 5px;
-    text-decoration: none;
-    /* position: relative; */
-}
-.spa{
-    position: relative;
-    top: -13px;
-    right: 15px;
-    color: white;
-    background-color: orange;
-    font-size: 12px;
-    border-radius: 50%;
-    padding: 0px 5px;
-    font-weight: 600;
-}
 
-.play{
-    display: flex;
-}
+
 .arr{
     margin-left: 5px;
     font-size: 25px;
@@ -282,9 +254,11 @@ transition: .2s;
 .paret{
  
     display: flex;
-    align-items: center;
+    align-items: baseline;
+    justify-content: space-around;
     padding: 0;
     margin: 0;
+    padding-top: 10px;
 }
 
 .bud{
@@ -350,7 +324,11 @@ transition: .2s;
 }
 .anima{
     animation: movement 15s infinite;
+    width: 175px;
+    height: 350px;
+    border-radius: 5px;
 }
+
 
 @keyframes movement{
     0% {background-image: url('shoe3.jpg');background-size: 100% 100%;}
@@ -605,3 +583,399 @@ gap: px;
 .tails button{
     border: none;
 }
+
+.dropbtn {
+    color: black;
+    /* padding: 16px; */
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdowncontent {
+    top: 100%;
+    display: none;
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.7);
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+  }
+ 
+  .dropdowncontent a {
+    
+    padding: 6px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdowncontent a:hover {
+    background-color: rgb(239, 166, 29);
+    border-radius: 5px;
+
+}
+
+  
+  .dropdown:hover .dropdowncontent {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #f1f1f1;
+  }
+
+  .dropbtn{
+    display: flex;
+    align-items: baseline;
+    
+}
+.dropbtn p{
+    font-weight: 600;
+}
+.dropbtn:hover{
+color: rgb(242, 161, 11);
+transition: .2s;
+}
+.ico{
+    font-size: 25px;
+    margin-right: 5px;
+    text-decoration: none;
+    /* position: relative; */
+}
+.spa{
+    position: relative;
+    top: -13px;
+    right: 15px;
+    color: white;
+    background-color: orange;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 0px 5px;
+    font-weight: 600;
+}
+
+.play{
+    display: flex;
+}
+
+.ooh{
+    display: flex;
+    justify-content: space-around;
+}
+.ooh ul{
+    display: flex;
+}
+.ooh li{
+    margin: 5px 15px 0px 5px;
+    list-style-type: none;
+
+}
+
+.nvs{
+    font-weight: 700;
+}
+
+
+
+
+                 /* Media Queries */
+      @media(max-width: 1199px){
+        .anima {
+            width: 100%;
+        }
+        .inp{
+            width: 250px;
+            padding-left: 10px;
+        }
+        .img img{
+            width: 100%;
+            height: 180px;
+            background-color: whitesmoke;
+        }
+        .img1 img{
+            width: 100%;
+        }
+        .ani{
+            width: 100%;
+        }
+        .anis{
+            width: 100%;
+        }
+      }
+
+      @media(max-width: 1018px){
+        .inp{
+            width: 250px;
+            padding-left: 10px;
+        }
+        
+      
+        .dropbtn {
+            color: black;
+            /* padding: 16px; */
+            font-size: 12px;
+            border: none;
+            cursor: pointer;
+          }
+          .ico{
+            font-size: 20px;
+            margin-right: 0px;
+            text-decoration: none;
+        }
+        .arr{
+            margin-left: 0px;
+            font-size: 20px;
+        }
+      }
+      @media(max-width: 991px){
+        .img img{
+            width: 100%;
+            height: 180px;
+            background-color: whitesmoke;
+        }
+        .img1 img{
+            width: 100%;
+        } 
+        .input{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .splay h1{
+            font-size: 20px;
+            font-weight: 700;
+        }
+        .Mes{
+            color: orange;
+            font-size: 25px;
+        }
+        .Mess{
+            padding: 5px;
+            font-size: 30px;
+        }
+        .access h4{
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .line h4{
+            font-size: 13px;
+        }
+        .access p{
+            font-size: 10px;
+        }
+        .line p{
+            font-size: 10px;
+        }
+        .google{
+            display: flex;
+        }
+        .apps{
+            margin: 0px 5px;
+        }
+        .app img{
+            width: 20px;
+        }
+        
+        .app h5{
+            font-size: 8px;
+            padding: 0;
+            margin: 0;
+            font-weight: 700;
+        }
+        .app p{
+            font-size: 8px;
+            padding: 0;
+            margin: 0;
+        }
+        .line input{
+            padding:  13px;
+            width: 240px;
+            outline-color: orange;
+            border-radius: 5px;
+            border: none;
+            font-size: 10px;
+        }
+        .line button{
+        border: none;
+        padding: 6px 20px;
+        font-size: 8px;
+        font-weight: 600;
+        border: 1px solid white;
+        margin-top: 5px;
+        }
+        .lin p{
+            padding: 0;
+            margin: 0;
+            line-height: 0px;
+            font-size: 10px;
+            font-weight: 400;
+        }
+     
+        
+        .link h4{
+            font-size: 11px;
+            font-weight: 650;
+            color: white;
+            padding: 0;
+            margin: 0;
+        }
+        .phone{
+            background-color: rgb(6, 6, 122);
+            color: white;
+            font-size: 17px;
+            text-align: center;
+            padding: 15px;
+            font-weight: 700;
+            margin-top: 30px;
+        }
+      }
+
+        @media(max-width:844px){
+            .inp{
+                width: 250px;
+                padding-left: 10px;
+            }  
+            .btn{
+                border: none;
+                outline: none;
+                padding: 9px 15px;
+                margin-left: 10px;
+                color: black;
+                background-color: transparent;
+                border-radius: 5px;
+                box-shadow: 00 5px 10px gainsboro;
+                font-size: 15px;
+                font-weight: 700;
+                position: relative;
+            right: 26%;
+            }
+             .dropbtn p{
+                display: none;
+             }
+        }
+
+
+      @media (max-width: 767px){
+      
+        .img img{
+            width: 100%;
+            height: 250px;
+            background-color: whitesmoke;
+        }
+        .img{
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 15px;  
+        }
+        .img1 img{
+            width: 100%;
+            height: 300px;
+        } 
+        .img1{
+            margin: auto;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+        .health h1{
+            font-size: 15px;
+        }
+        
+      }
+
+      @media(max-width: 730px){
+        .inp{
+            width: 250px;
+            padding-left: 10px;
+            font-size: 13px;
+        }  
+        .btn{
+            border: none;
+            outline: none;
+            padding: 7px 15px;
+            margin-left: 10px;
+            color: black;
+            background-color: transparent;
+            border-radius: 5px;
+            box-shadow: 00 5px 10px gainsboro;
+            font-size: 13px;
+            font-weight: 550;
+            position: relative;
+        right: 24%;
+        } 
+        .ne{
+            font-size: 15px;
+        }
+        .m{
+            font-size: 15px;
+        }
+      }
+
+@media(max-width: 658px){
+    .paret{
+    display: flex;
+    flex-wrap: wrap;
+    }
+    .ne{
+        display: none;
+    }
+    .m{
+        display: none;
+    }
+    .inp{
+        width: 250px;
+        padding-left: 10px;
+        font-size: 13px;
+    }  
+ 
+}
+
+      @media(max-width: 575px){
+          .anima{
+            height: 280px;
+        }
+        .ani{
+            height: 130px;
+        }
+        .anis{
+            height: 130px;
+        }
+      }
+
+      @media(max-width: 436px){
+     .aut{
+        margin: auto;
+     }
+     .inter{
+        display: flex;
+        flex-flow: column;
+        gap: 0px;
+    }
+
+    
+    .img img{
+        width: 100%;
+        height: 150px;
+        background-color: whitesmoke;
+    }
+    .img{
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 15px;  
+    }
+    .img1 img{
+        width: 100%;
+        height: 200px;
+    } 
+    .img1{
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+
+
+      }

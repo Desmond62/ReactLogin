@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react'
 import des from './styles.module.css';
 import axios from 'axios';
 import Display from './Display';
-import Combine from './Combine';
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { Link, NavLink} from 'react-router-dom';
 import {MdStars} from "react-icons/md";
 import {LiaFacebookF} from "react-icons/lia";
 import {BsYoutube} from "react-icons/bs";
@@ -32,15 +31,12 @@ function Product() {
   },[])
   return (
     <div>
-      <div>
-        <Combine/>
-      </div>
       <p>
         {Products.length== 0 ? (
           <p>loading....</p>
         ): (
           <div className='container pt-3'>
-           <div className='row'> 
+           <div className='row boo'> 
             
             {Products
             .map((item, i) => {
@@ -57,7 +53,7 @@ function Product() {
              <footer class="">
                     <section class="pt-4 pb-4" style={{backgroundColor:"rgb(0, 0, 0, 0.8)"}}>
                       <div class='container'>
-                        <div class="row">
+                        <div class="row foot-container">
                           <div class="col-md-3">
                             <div className={des.splay}>
                               <div>
@@ -80,7 +76,7 @@ function Product() {
                             </div>
                           </div>
 
-                          <div class="col-md-4">
+                          <div class="col-md-4  load">
                             <div className={des.access}>
                               <div>
                               <MdStars className={des.Mess}/>
@@ -90,6 +86,8 @@ function Product() {
                                 <p>Get access to exclusive offers!</p>
                               </div>
                             </div>
+
+                          <div className={des.google}>
                             <button className={des.apps}>
                               <div className={des.app}>
                               <div>
@@ -112,8 +110,8 @@ function Product() {
                                   <h5>Google Play</h5>
                                 </div>
                               </div>
-                              
-                            </button>                         
+                            </button>
+                            </div>                         
                              </div>
                         </div>
                       </div>
@@ -121,7 +119,7 @@ function Product() {
 
                     <section  class="pt-4 pb-4" style={{backgroundColor:"rgb(0, 0, 0, 0.7)"}}>
                       <div class="container">
-                        <div class="row">
+                        <div class="row welcome">
                           <div class="col-md-3">
                               <div className={des.link}>
                                 <h4>NEED HELP?</h4>
@@ -201,10 +199,10 @@ function Product() {
                                 </div>
                               </div>
                           </div>
-                          <hr style={{color:'white', marginTop: 30}} />
                         </div>
                       </div>
-                      
+                      <hr style={{color:'white', marginTop: 30}} />
+
                     <div className={des.footer}>
                     <div>
                        <NavLink className={des.nav}
@@ -249,16 +247,4 @@ function Product() {
 }
 
 export default Product
-     {/* <h1>My Product Page</h1>
-      <section>
-
-
-        {Products}
-<div className={des.img}>
-     <img src="beauty.png" alt=""/>
-<div className={des.display}>
-<p>beauty girl</p>
-<h1>$200.00</h1>
-</div>
-</div>
-</section> */}
+  

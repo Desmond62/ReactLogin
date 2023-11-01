@@ -1,1 +1,120 @@
 
+.tog{
+    width: 17%;
+    height: 70%;
+    margin-left: 50px;
+    margin-top: 110px;
+    border-radius: 10px;
+}
+.dropbtn {
+    /* background-color: ; */
+    color: black;
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -50px;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    height: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 20px 10px;
+    border: 1px solid  whitesmoke;
+    border-radius: 5px;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 2px 8px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  
+
+
+  /* Media Queris */
+  @media(max-width: 767px){
+    .welcome{
+        /* display: flex; */
+        /* -ms-layout-grid-line: row-reverse; */
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+  
+    .boo{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+   }
+   .boo1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+ }
+
+  .foot-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  }
+
+  @media(max-width: 575px){
+    .wels{
+      display: grid;
+      grid-template-columns: 1fr 3fr 1fr;
+    }
+    .items img{
+      height: 280px;
+    }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -30px;
+    background-color: white;
+    min-width: 140px;
+    height: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 20px 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+  }
+  }
+
+  @media(max-width: 482px){
+    .foot-container{
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media(max-width: 436px){
+    .welcome{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column-reverse;
+      text-align: center;
+    }
+  }
+
+  

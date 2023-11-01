@@ -10,6 +10,8 @@ function ProductDetails() {
     const [details, setDetails] = useState();
     console.log(id)
 
+    const [currentImageIndex,setcurrentImageIndex]=useState();
+
     const HandleProduct=()=>{
         const details =JSON.parse(localStorage.getItem("products"));
         const get = details.filter((item) => item.id == id);
@@ -19,13 +21,10 @@ function ProductDetails() {
         HandleProduct();
     },[])
 
-    const changeDetails =(e) =>{
-      e.preventDefault();
-        document.getElementById('myImage').src="{details[0]?.images[1]}"
-        document.getElementById('myImage').src="{details[0]?.images[2]}"
-        document.getElementById('myImage').src="{details[0]?.images[3]}"
-        document.getElementById('myImage').src="{details[0]?.images[4]}"
-
+    
+    const changeDetails =(index) =>{
+    setcurrentImageIndex(index);
+        
     } ;
   
   return (
@@ -34,7 +33,7 @@ function ProductDetails() {
     <div className={des.prod}>
       <div className={des.produt}>
       {
-        details && <img id='myImage'  src={details[0]?.images[0]} alt="" />
+        details && <img id='myImage'  src={details[0]?.images[currentImageIndex]} alt="" />
       }
      <h1> {details && details[0]?.title} </h1>
      <h1>{ details && details[0]?.price}</h1>
@@ -42,19 +41,11 @@ function ProductDetails() {
    
       <div className={des.tails}>
 
-   <button onClick={changeDetails}>{
-        details && <img src={details[0]?.images[1]} alt="" />
-      }</button>   
-   <button onClick={changeDetails}>  {
-        details && <img src={details[0]?.images[2]} alt="" />
-      }</button> 
-
-<button onClick={changeDetails}>    {
-        details && <img src={details[0]?.images[3]} alt="" />
-      }</button> 
-      <button onClick={changeDetails}> {
-        details && <img src={details[0]?.images[4]} alt="" />
-      }</button> 
+      {details && 
+      details[0]?.images.slice(0).map((image,index) =>(
+          <button key={index} onClick={() => changeDetails(index + 0)}><img src ={image} alt=""/></button>
+        ))
+      }
        </div> 
     </div>
   

@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import des from './styles.module.css'
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
+
 function Form() {
   const navigate=useNavigate();
   const[user,setUser]=useState({
@@ -18,12 +21,15 @@ function Form() {
         if(user.Name.trim()===''){
             newErrors.NameErr='Your Name Is Required'
         }
-        if(user.Email.trim()===''){
+        if(user.Email.trim()=== ''){
             newErrors.EmailErr='Your Email Is Required'
         }
-        if(user.Password.trim()===''){
+        if(user.Password.trim()  === ''){
             newErrors.PasswordErr='Your Password Is Required'
         }
+        if(user.Password.trim().length < 8){
+          newErrors.PasswordErr='Your Password shouldnt be less than 8 characters'
+      }
         if(user.RepeatPassword.trim()===''){
             newErrors.RepeatPasswordErr='Your Password Is Required'
         }
@@ -36,6 +42,13 @@ function Form() {
             const users=JSON.parse(localStorage.getItem('users'))||[]
             users.push(user)
             localStorage.setItem('users',JSON.stringify(users))
+            Swal.fire({
+              position: 'top-center',
+              icon: 'success',
+              title: 'You have successfully Registered',
+              showConfirmButton: false,
+              timer: 2500
+            })
             navigate('/login')
         }
        }

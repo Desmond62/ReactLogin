@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 import des from './styles.module.css'
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
+
+
 function Login() {
   const navigate=useNavigate();
 const[user,setUser]=useState({
@@ -30,7 +33,14 @@ const handleSubmit =(e)=>{
         );
         if(matchedUser){
           // Successful login
-          alert("Successful Login")
+        
+          Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'You have successfully loggin',
+            showConfirmButton: false,
+            timer: 2500
+          })
           navigate('/',{replace:true})
         }
         else{
